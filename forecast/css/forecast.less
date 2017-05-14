@@ -1,0 +1,71 @@
+@mainColor: #293d3f;
+@headColor: #fff;
+// 定义块级元素的长和宽
+.size (@width, @height) {
+    width: @width;
+    height: @height;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    .size (100%, 60 / 37.5rem);
+    background-color: @mainColor;
+    text-align: center;
+    h1 {
+        font-size: 30 / 37.5rem;
+        font-weight: 700;
+        line-height: 60 / 37.5rem;
+        color: @headColor;
+    }
+}
+nav {
+    .size (330 / 37.5rem, 20 / 37.5rem);
+    margin: 0 auto;
+    margin-top: 26 / 37.5rem;
+    time {
+        font-size: 20 / 37.5rem;
+        color: @mainColor;
+        float: left;
+    }
+    p {
+        font-size: 20 / 37.5rem;
+        color: @mainColor;
+        float: right;
+    }
+}
+#forecast {
+    .size (248 / 37.5rem, 200 / 37.5rem);
+    margin: 0 auto;
+    margin-top: 54 / 37.5rem;
+    #weather {
+        .size (248 / 37.5rem, 76 / 37.5rem);
+        i {
+            font-size: 76 / 37.5rem;
+            display: inline-block;
+            float: left;
+        }
+        #temp {
+            .size (160 / 37.5rem, 76 / 37.5rem);
+            float: right;
+            p {
+                font-size: 24 / 37.5rem;
+                color: @mainColor;
+                line-height: 34 / 37.5rem;
+                span {
+                    font-size: 38 / 37.5rem;
+                }
+            }
+        }
+    }
+    #more {
+        .size (248 / 37.5rem, 76 / 37.5rem);
+        margin-top: 30 / 37.5rem;
+        p {
+            font-size: 24 / 37.5rem;
+            color: @mainColor;
+            line-height: 34 / 37.5rem;
+        }
+    }
+}
